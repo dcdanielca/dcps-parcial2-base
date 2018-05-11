@@ -9,3 +9,4 @@ export default function() {
 
   this.resource('blog-posts');
 }
+

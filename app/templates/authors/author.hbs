@@ -11,12 +11,15 @@
 </div>
 
 <h2>Posts</h2>
-
+{{#if model.posts.length}}
+    <div>This author don't have posts</div>
+{{/if}}
 <div>
     <ul>
         {{#each model.posts as |post|}}
         <div>
             <li> {{post.title}} </li>
+            <button {{action 'delete' post.id}}>Delete Post</button>
             <br> {{post.publishedAt}}
             <br> {{post.content}}
         </div>
